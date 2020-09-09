@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ping -qc1 google.com 2>&1 | awk -F'/' 'END{ print (/^rtt/? "  OK "$5" ms":"  FAIL") }'
